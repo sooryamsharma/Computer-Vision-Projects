@@ -1,2 +1,2 @@
 # Computer-Vision-Projects
-Will be uploaded soon.
+Had to take off due to some reasons, will be uploaded soon.
