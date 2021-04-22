@@ -86,11 +86,57 @@ distance function to determine the inliers. The symmetrical reprojection error i
 
 ![sift](images/reprojection_error.png)
 
-Since mpts1 and mpts2 are homogeneous coordinates, you have to normalize ^Hmpts1 and ^H^-1mpts2 before
+Since mpts1 and mpts2 are homogeneous coordinates, you have to normalize Hmpts1 and (H^-1)mpts2 before
 computing the norm. To decide if a point is an inlier, use THRESH as a threshold for the error. If THRESH is
-0, then use 2.5 $$\delta$$ as the threshold where \delta is the standard deviation of the error. Try out diifferent values of
+0, then use 2.5δ as the threshold where δ is the standard deviation of the error. Try out diifferent values of
 THRESH to see which ones give reasonable performance.
+
+Use only the inliers found to compute the return value using the least squares compute homography function.
+Additional information can be found in [1]. In particular, refer to steps 1-3 of Algorithm 4.6 in section 4.8
+'Automatic computation of a homography'.
 
 ### Sol.
 
 ![sift](images/2.20_compute_homography_ransac.png)
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+## 3. Image Blending
+
+### Problem 3.1 Laplacian Pyramid Blending
+
+After estimating the homography between two images, they can be stitched together using Laplacian pyra-
+mid blending. Write a MATLAB function blend = blend images(img1,img2,mask1,mask2) that takes
+as input two images and their corresponding binary masks and blends them together into a single output
+image using five pyramid levels. For additional information, see section 3.5.5 in [2] (available online).
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+## 4. Image Panaroma
+
+### Problem 4.1 Composite Creation
+
+To stitch together the left and right images related by a homography H, you must first transform the points
+in the right image to those in the left by applying H. Next, use the left and the transformed right images
+as input to the blend images function. You may want to create larger images. Can you see what the mask
+images should be in this case?
+
+Write a function panorama = create panorama2(img left,img right,use sift,use ransac) using all
+of the functions created above that takes as input two images and finds the corresponding feature points,
+estimates the homography based on these points, and finally blends these images together to create a
+panoramic image as output. use sift and use ransac are boolean flags that determine whether to use
+corner detection or SIFT features and least squares or RANSAC methods.
+
+Write a MATLAB script 'create panorama.m' that reads in all five input images and uses create panorama2
+repeatedly to create a single composite image automatically. To create visually better results you can add
+an extra input flag to the create panorama2 function that decides whether you transform points in the left
+image to the right image, or vice versa.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+## References
+
+### [1] R. Hartley and A. Zisserman. \Multiple View Geometry in Computer Vision". Cambridge University Press, 2003.
+
+### [2] R. Szeliski. \Computer Vision: Algorithms and Applications". Springer Science & Business Media,
+2010.
