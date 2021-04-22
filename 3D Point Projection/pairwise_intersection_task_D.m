@@ -49,7 +49,7 @@ Q61=project_point(t61);
 Q62=project_point(t62);
 
 %Defining view point (setting azimuth and elevation)
-title('Task B and C');
+title('Task D');
 xlabel('x-axis');
 ylabel('y-axis');
 zlabel('z-axis');
