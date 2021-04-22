@@ -12,7 +12,10 @@
 4. Hough Transform
 5. Image Panaroma
 
-Some of which I could not include, I have added them as tiles below.
+## Some of which I could not include, I have added them as tiles below.
 
-![](images/3.3.png) | ![](images/3.4.png) | ![](images/3.2.png)
-:------------------:|:-------------------:|:--------------------:  
+![](images/unlisted_projects/3.3.png) | ![](images/unlisted_projects/3.4.png)
+:------------------:|:-------------------:
+![](images/unlisted_projects/1.1_P_pl_pr.png) | ![](images/unlisted_projects/1.2_P_P_hat.png)
+![](images/unlisted_projects/3.6.png) | ![](images/unlisted_projects/3.7.png)
+![](images/unlisted_projects/3.8.png) | ![](images/unlisted_projects/3.9.png)
