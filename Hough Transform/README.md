@@ -1,7 +1,7 @@
 ## Objectives:
 
 Write a MATLAB script that implements the Hough transform. It must compute the parameters for all the
-lines present in the accompanying image \line.jpg" (shown in Figure 1). You will need to do edge detection
+lines present in the accompanying image "line.jpg" (shown in Figure 1). You will need to do edge detection
 before you apply the Hough transform and may use the MATLAB command edge with the method of your
 choice (Canny, Sobel, Roberts). However, you cannot use the MATLAB command hough.
 
