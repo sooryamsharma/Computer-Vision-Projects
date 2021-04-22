@@ -138,5 +138,4 @@ image to the right image, or vice versa.
 
 ### [1] R. Hartley and A. Zisserman. \Multiple View Geometry in Computer Vision". Cambridge University Press, 2003.
 
-### [2] R. Szeliski. \Computer Vision: Algorithms and Applications". Springer Science & Business Media,
-2010.
+### [2] R. Szeliski. \Computer Vision: Algorithms and Applications". Springer Science & Business Media, 2010.
